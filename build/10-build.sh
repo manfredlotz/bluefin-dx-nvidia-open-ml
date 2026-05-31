@@ -58,6 +58,8 @@ dnf5 install -y selinux-policy-doc
 # want to mount remote file systems via SSH
 dnf5 install -y fuse-sshfs
 
+dnf5 install -y spice-gtk-tools
+
 # Example using COPR with isolated pattern:
 # copr_install_isolated "ublue-os/staging" package-name
 
