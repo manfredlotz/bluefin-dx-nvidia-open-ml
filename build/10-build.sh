@@ -60,6 +60,10 @@ dnf5 install -y fuse-sshfs
 
 dnf5 install -y spice-gtk-tools
 
+# Install additional utilities
+dnf5 install -y \
+    kitty
+
 # Example using COPR with isolated pattern:
 # copr_install_isolated "ublue-os/staging" package-name
 
