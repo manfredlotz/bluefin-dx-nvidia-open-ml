@@ -64,6 +64,9 @@ dnf5 install -y spice-gtk-tools
 dnf5 install -y \
     kitty
 
+dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+dnf5 install -y ghostty ghostty-bat-syntax ghostty-nautilus ghostty-neovim
+
 # Example using COPR with isolated pattern:
 # copr_install_isolated "ublue-os/staging" package-name
 
