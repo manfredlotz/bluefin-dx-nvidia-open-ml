@@ -64,6 +64,13 @@ dnf5 install -y spice-gtk-tools
 dnf5 install -y \
     kitty
 
+# wezterm-nightly: https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly
+#  we remove it here as we can get wezterm via a `brew` cask
+# dnf5 -y copr enable wezfurlong/wezterm-nightly
+# dnf5 -y install wezterm
+#
+copr_install_isolated wezfurlong/wezterm-nightly wezterm
+
 dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 dnf5 install -y ghostty ghostty-bat-syntax ghostty-nautilus ghostty-neovim
 
