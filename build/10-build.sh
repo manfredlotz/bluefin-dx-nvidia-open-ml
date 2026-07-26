@@ -60,9 +60,16 @@ dnf5 install -y fuse-sshfs
 
 dnf5 install -y spice-gtk-tools
 
+# A cross-platform, multi-language package manager
+dnf5 install -y pixi
+
+#
+# Emacs is installed via sysext. See: `systemd-sysext status`
+#
+
 # Install additional utilities
 dnf5 install -y \
-    kitty
+	kitty
 
 # wezterm-nightly: https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly
 #  we remove it here as we can get wezterm via a `brew` cask
