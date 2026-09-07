@@ -60,6 +60,7 @@ dnf5 install -y fuse-sshfs
 
 dnf5 install -y spice-gtk-tools
 dnf5 install -y nss-tools
+dnf5 install -y libgda libgda-sqlite
 
 #
 # Emacs is installed via sysext. See: `systemd-sysext status`
