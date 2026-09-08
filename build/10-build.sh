@@ -60,6 +60,8 @@ dnf5 install -y fuse-sshfs
 
 dnf5 install -y spice-gtk-tools
 dnf5 install -y nss-tools
+
+# now required packages because the image from projectbluefin is much smaller
 dnf5 install -y libgda libgda-sqlite
 
 #
