@@ -63,6 +63,8 @@ dnf5 install -y nss-tools
 
 # now required packages because the image from projectbluefin is much smaller
 dnf5 install -y libgda libgda-sqlite
+# we still need virt manager from RPM as using the flatpak based one has to many issues
+dnf5 install -y @virtualization
 
 #
 # Emacs is installed via sysext. See: `systemd-sysext status`
