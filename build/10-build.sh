@@ -55,6 +55,8 @@ dnf5 install -y opensmtpd
 # getting more SELinux related  man pages and documentation for SELinux policy modules
 dnf5 install -y selinux-policy-doc
 
+dnf5 install -y gparted
+
 # want to mount remote file systems via SSH
 dnf5 install -y fuse-sshfs
 
@@ -65,6 +67,7 @@ dnf5 install -y nss-tools
 dnf5 install -y libgda libgda-sqlite
 # we still need virt manager from RPM as using the flatpak based one has to many issues
 dnf5 install -y @virtualization
+dnf5 install -y swtpm
 
 #
 # Emacs is installed via sysext. See: `systemd-sysext status`
