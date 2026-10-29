@@ -73,10 +73,6 @@ dnf5 install -y swtpm
 # Emacs is installed via sysext. See: `systemd-sysext status`
 #
 
-# Install additional utilities
-dnf5 install -y \
-	kitty
-
 # wezterm-nightly: https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly
 #  we remove it here as we can get wezterm via a `brew` cask
 # dnf5 -y copr enable wezfurlong/wezterm-nightly
