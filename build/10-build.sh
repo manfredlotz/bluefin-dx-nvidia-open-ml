@@ -80,6 +80,7 @@ dnf5 install -y libgda libgda-sqlite
 dnf5 install -y @virtualization
 dnf5 install -y swtpm
 
+dnf5 install -y neovim neovim-remote
 #
 # Emacs is installed via sysext. See: `systemd-sysext status`
 #
