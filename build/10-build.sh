@@ -92,7 +92,6 @@ dnf5 install -y swtpm
 copr_install_isolated wezfurlong/wezterm-nightly wezterm
 
 dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
-dnf5 install -y ghostty ghostty-bat-syntax ghostty-nautilus ghostty-neovim
 
 # A cross-platform, multi-language package manager
 dnf5 install -y pixi
