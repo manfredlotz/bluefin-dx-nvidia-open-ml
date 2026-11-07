@@ -80,7 +80,6 @@ dnf5 install -y libgda libgda-sqlite
 dnf5 install -y @virtualization
 dnf5 install -y swtpm
 
-dnf5 install -y neovim neovim-remote
 #
 # Emacs is installed via sysext. See: `systemd-sysext status`
 #
@@ -94,6 +93,7 @@ copr_install_isolated wezfurlong/wezterm-nightly wezterm
 
 dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
+dnf5 install -y neovim
 # A cross-platform, multi-language package manager
 dnf5 install -y pixi
 
