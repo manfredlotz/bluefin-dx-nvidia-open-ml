@@ -39,6 +39,17 @@ find /ctx/custom/ujust -iname '*.just' -exec printf "\n\n" \; -exec cat {} \; >>
 mkdir -p /etc/flatpak/preinstall.d/
 cp /ctx/custom/flatpaks/*.preinstall /etc/flatpak/preinstall.d/
 
+cp /ctx/custom/nvidia/99-nvidia.conf /usr/lib/dracut/dracut.conf.d/99-nvidia.conf
+KERNEL_VERSION="$(ls /usr/lib/modules | head -n1)"
+dracut --no-hostonly --kver "$KERNEL_VERSION" --reproducible --add ostree -f \
+	"/usr/lib/modules/$KERNEL_VERSION/initramfs.img"
+
+# Fail the build if NVIDIA is still in the initramfs
+if lsinitrd "/usr/lib/modules/$KERNEL_VERSION/initramfs.img" | grep -q nvidia; then
+	echo "error: nvidia modules still in initramfs" >&2
+	exit 1
+fi
+
 echo "::endgroup::"
 
 echo "::group:: Install Packages"
